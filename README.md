@@ -1,55 +1,110 @@
-**Lab: Functions in JavaScript**
+# Functions in JavaScript
 
-**Estimate Completed Time:** 30-60 minutes
+A collection of utility functions for performing common budget-related calculations.
 
-**Overview:**
-You are working as a junior developer at a company that builds tools for managing personal budgets. Your task is to create a set of basic functions to perform common calculations related to budgeting. This lab will help you practice defining and using functions in JavaScript.
+## Overview
 
-**Tools and Resources:**
-- VSCode
-- GitHub repository https://github.com/learn-co-curriculum/phase-0-js-functions-lab.git
-- Refer to previous lessons on JavaScript functions if needed
+This project provides a set of reusable JavaScript functions for numeric calculations, string manipulation, and data validation. The functions are fully tested and ready for integration into budget management applications.
 
-**Instructions:**
+## Requirements
 
-1. **Fork and Clone the Repository:**
-   - Fork the provided GitHub repository to your own account.
-   - Clone your forked repository to your local machine.
+- Node.js 12.0 or higher
+- npm
 
-2. **Navigate to the Project Directory:**
-   - Open a terminal and navigate to the project directory where you cloned the repository.
+## Installation
 
-3. **Create Functions:**
-   - **Function 1: `calculateTax`**
-     - Create a function named `calculateTax` that takes a single parameter, `amount`, representing a monetary value.
-     - The function should calculate a 10% tax on the amount and return the tax value.
+```bash
+git clone https://github.com/learn-co-curriculum/phase-0-js-functions-lab.git
+cd phase-0-js-functions-lab
+npm install
+```
 
-   - **Function 2: `convertToUpperCase`**
-     - Create a function named `convertToUpperCase` that takes a single parameter, `text`, which is a string.
-     - The function should convert the string to uppercase and return the result.
+## API Reference
 
-   - **Function 3: `findMaximum`**
-     - Create a function named `findMaximum` that takes two parameters, `num1` and `num2`, which are numbers.
-     - The function should return the larger of the two numbers.
+### `calculateTax(amount)`
 
-   - **Function 4: `isPalindrome`**
-     - Create a function named `isPalindrome` that takes a single parameter, `word`, which is a string.
-     - The function should return `true` if the string is a palindrome (reads the same forward and backward), and `false` otherwise.
+Calculates a 10% tax on a monetary amount.
 
-   - **Function 5: `calculateDiscountedPrice`**
-     - Create a function named `calculateDiscountedPrice` that takes two parameters: `originalPrice` and `discountPercentage`.
-     - The function should calculate and return the price after applying the discount. For example, if `originalPrice` is $100 and `discountPercentage` is 20, the function should return $80.
+```javascript
+calculateTax(100) // Returns: 10
+```
 
-4. **Test Your Functions:**
-   - Run the tests provided in the repository to ensure your functions work as expected. The tests will check the correctness of your implementations.
+**Parameters:**
+- `amount` (number) - the monetary value
 
-5. **Submit Your Work:**
-   - Once your functions are implemented and pass all tests, commit your changes and push them to your forked repository on GitHub.
+**Returns:** (number) - the calculated tax amount
 
-**Submission and Grading Criteria:**
+---
 
-- **Submission Format:** Submit a link to your GitHub repository.
-- **Grading Criteria:**
-  - Correct implementation of each function (`calculateTax`, `convertToUpperCase`, `findMaximum`, `isPalindrome`, and `calculateDiscountedPrice`).
-  - Functions should handle typical input values correctly.
-  - Code should be clean and follow JavaScript conventions.
+### `convertToUpperCase(text)`
+
+Converts a string to uppercase.
+
+```javascript
+convertToUpperCase("hello") // Returns: "HELLO"
+```
+
+**Parameters:**
+- `text` (string) - the text to convert
+
+**Returns:** (string) - the uppercase string
+
+---
+
+### `findMaximum(num1, num2)`
+
+Returns the larger of two numbers.
+
+```javascript
+findMaximum(5, 10) // Returns: 10
+```
+
+**Parameters:**
+- `num1` (number) - first number
+- `num2` (number) - second number
+
+**Returns:** (number) - the maximum value
+
+---
+
+### `isPalindrome(word)`
+
+Checks if a string is a palindrome.
+
+```javascript
+isPalindrome("racecar") // Returns: true
+isPalindrome("hello")   // Returns: false
+```
+
+**Parameters:**
+- `word` (string) - the word to check
+
+**Returns:** (boolean) - `true` if palindrome, `false` otherwise
+
+---
+
+### `calculateDiscountedPrice(originalPrice, discountPercentage)`
+
+Calculates the final price after applying a discount.
+
+```javascript
+calculateDiscountedPrice(100, 20) // Returns: 80
+```
+
+**Parameters:**
+- `originalPrice` (number) - the original price
+- `discountPercentage` (number) - the discount percentage to apply
+
+**Returns:** (number) - the discounted price
+
+## Testing
+
+Run the full test suite:
+
+```bash
+npm test
+```
+
+## License
+
+MIT
